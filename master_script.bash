@@ -18,6 +18,7 @@ function cls(){
 }
 function acceptall(){
     echo -e "acceptall"
+    bash ./accept-all.bash
 }
 function accept_and_load(){
     echo -e "accept_and_load"
