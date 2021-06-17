@@ -17,11 +17,15 @@ function cls(){
     printf "\033c"
 }
 function acceptall(){
-    echo -e "acceptall"
-    bash ./accept-all.bash
+    echo -e "you need to be superuser to use this script"
+    echo -e "please enter the sudo password now"
+    sudo bash ./accept-all.bash
 }
 function accept_and_load(){
-    echo -e "accept_and_load"
+    echo -e "you need to be superuser to use this script"
+    echo -e "please enter the sudo password now"
+    sudo bash ./accept-all.bash
+    sudo bash ./freshload_all.bash
 }
 function freshload_list(){
     echo -e "freshload a list of clients"

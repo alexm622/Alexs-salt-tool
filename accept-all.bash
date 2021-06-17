@@ -14,7 +14,7 @@ fi
 
 
 ##accept all keys
-#echo -e "y\r" | salt-key -A > /tmp/alexs-scripts/accepted.tmp
+echo -e "y\r" | salt-key -A > /tmp/alexs-scripts/accepted.tmp
 cat /tmp/alexs-scripts/accepted.tmp | grep remi- > /tmp/alexs-scripts/accepted2.tmp
 out=$(cat /tmp/alexs-scripts/accepted2.tmp | wc -l)
 echo out:$out
