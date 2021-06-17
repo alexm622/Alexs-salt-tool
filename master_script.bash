@@ -40,7 +40,7 @@ function chocolatey(){
     echo -e "use chocolatey"
 }
 
-
+cls
 motd
 
 options=( "accept all awaiting clients" "accept and freshload all waiting clients"
@@ -64,6 +64,20 @@ do
             chocolatey ;;
         "Quit")
             exit 255 ;;
-        *) echo "invalid option $REPLY";;
+        *) 
+        cls
+
+        motd
+                                                                      
+        echo "1) accept all awaiting clients"
+        echo "2) accept and freshload all waiting clients"
+        echo "3) freshload all clients from a list of clients"
+        echo "4) execute a command across a list of clients"
+        echo "5) execute a script across a group of clients"
+        echo "6) use chocolatey to install something across a group of clients"
+        echo "7) Quit"
+        echo "invalid option $REPLY"
+        ;;
     esac
 done
+
