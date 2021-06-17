@@ -1,17 +1,17 @@
 #!/bin/bash
 
 GROUP_SIZE=5
-if [ ! -d /tmp/alexs-scripts ]; then
-        #make the temp directory
-        echo "creating temp directory"
-        mkdir /tmp/alexs-scripts/
-fi
 
 if [[ $EUID -ne 0 ]]; then
    echo "This script must be run as root" 
    exit 255
 fi
 
+if [ ! -d /tmp/alexs-scripts ]; then
+        #make the temp directory
+        echo "creating temp directory"
+        mkdir /tmp/alexs-scripts/
+fi
 
 ##accept all keys
 echo -e "y\r" | salt-key -A > /tmp/alexs-scripts/accepted.tmp
